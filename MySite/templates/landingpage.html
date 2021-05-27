@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'userlogin/css/signup.css' %}">
+</head>
+<body>
+  <form action='' method="POST">
+    {% csrf_token %}
+    <div class="container">
+      <h1>Congratulations you have logged in!</h1>
+      <p>Name: {{ info.first_name }} {{ info.last_name }}<br>Email: {{ info.email }}<p>
+      
+    </div>
+  </form>
+</body>

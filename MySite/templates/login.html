@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'userlogin/css/signin.css' %}">
+</head>
+<body>
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="container">
+      {{ form.as_p }}
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">New user<a href="{% url 'userlogin:signup' %}">Create a new account</a></span>
+    </div>
+  </form>
